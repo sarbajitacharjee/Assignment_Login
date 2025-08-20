@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div className="flex min-h-screen bg-gray-50 px-4">
       {/* MOBILE: bottom-aligned | DESKTOP: centered card */}
-      <div className="w-full flex flex-col justify-end sm:justify-center ">
+      <div className="w-full flex flex-col justify-end sm:justify-center mb-10">
         <div className="w-full sm:max-w-md sm:bg-white sm:rounded-2xl sm:shadow-lg sm:p-6 sm:mx-auto">
           {/* Heading */}
           <h1 className="text-2xl font-semibold text-gray-800 mb-2">
