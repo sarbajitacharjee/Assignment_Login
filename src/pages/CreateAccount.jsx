@@ -1,76 +1,39 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React from "react";
 
 const Register = () => {
-  const navigate = useNavigate();
-
-  const [formData, setFormData] = useState({
-    fullName: "",
-    phone: "",
-    email: "",
-    password: "",
-    company: "",
-    agency: ""
-  });
-
-  // Check if all fields except company are filled
-  const isFormValid =
-    formData.fullName &&
-    formData.phone &&
-    formData.email &&
-    formData.password &&
-    formData.agency;
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (isFormValid) {
-      navigate("/dashboard"); // redirect on success
-    }
-  };
-
   return (
-    <div className="min-h-screen flex items-top justify-top bg-gray-50 px-4">
-      <div className="w-full max-w-md bg-white  p-6 ">
-        <h1 className="text-2xl font-bold text-gray-800">
-          Create your <br /> PopX account
-        </h1>
+    <div className="min-h-screen flex justify-center items-top md:items-center bg-white">
+      {/* Wrapper: Full screen on mobile, card on desktop */}
+      <div className="w-full px-6 py-8 md:w-[400px] md:bg-white md:rounded-xl md:shadow-md">
+        <h2 className="text-2xl font-bold text-gray-800 mb-1">
+          Create your
+        </h2>
+        <h2 className="text-2xl font-bold text-gray-800 mb-6">
+          PopX account
+        </h2>
 
-        <form className="mt-6 space-y-5" onSubmit={handleSubmit}>
+        <form className="space-y-5">
           {/* Full Name */}
           <div className="relative">
             <input
               type="text"
-              name="fullName"
-              value={formData.fullName}
-              onChange={handleChange}
               required
-              className="w-full px-3 pt-4 pb-2 border-2 border-gray-300 rounded-lg outline-none focus:border-purple-500"
+              className="w-full px-3 pt-4 pb-2 border-2 border-gray-400 rounded-lg outline-none focus:border-purple-600"
             />
-            <span className="absolute -top-2 left-3 px-1 text-sm text-purple-600 bg-white">
-              Full Name *
+            <span className="absolute -top-2 left-3 px-1 text-sm font-semibold text-purple-600 bg-white">
+              Full Name <span className="text-red-800 font-bold"> *</span>
             </span>
           </div>
 
           {/* Phone Number */}
           <div className="relative">
             <input
-              type="tel"
-              name="phone"
-              value={formData.phone}
-              onChange={handleChange}
+              type="text"
               required
-              className="w-full px-3 pt-4 pb-2 border-2 border-gray-300 rounded-lg outline-none focus:border-purple-500"
+              className="w-full px-3 pt-4 pb-2 border-2 border-gray-400 rounded-lg outline-none focus:border-purple-600"
             />
-            <span className="absolute -top-2 left-3 px-1 text-sm text-purple-600 bg-white">
-              Phone number *
+            <span className="absolute -top-2 left-3 px-1 text-sm font-semibold text-purple-600 bg-white">
+              Phone number <span className="text-red-800 font-bold"> *</span>
             </span>
           </div>
 
@@ -78,14 +41,11 @@ const Register = () => {
           <div className="relative">
             <input
               type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
               required
-              className="w-full px-3 pt-4 pb-2 border-2 border-gray-300 rounded-lg outline-none focus:border-purple-500"
+              className="w-full px-3 pt-4 pb-2 border-2 border-gray-400 rounded-lg outline-none focus:border-purple-600"
             />
-            <span className="absolute -top-2 left-3 px-1 text-sm text-purple-600 bg-white">
-              Email address *
+            <span className="absolute -top-2 left-3 px-1 text-sm font-semibold text-purple-600 bg-white">
+              Email address <span className="text-red-800 font-bold"> *</span>
             </span>
           </div>
 
@@ -93,59 +53,35 @@ const Register = () => {
           <div className="relative">
             <input
               type="password"
-              name="password"
-              value={formData.password}
-              onChange={handleChange}
               required
-              className="w-full px-3 pt-4 pb-2 border-2 border-gray-300 rounded-lg outline-none focus:border-purple-500"
+              className="w-full px-3 pt-4 pb-2 border-2 border-gray-400 rounded-lg outline-none focus:border-purple-600"
             />
-            <span className="absolute -top-2 left-3 px-1 text-sm text-purple-600 bg-white">
-              Password *
+            <span className="absolute -top-2 left-3 px-1 text-sm  font-semibold text-purple-600 bg-white">
+              Password <span className="text-red-800 font-bold"> *</span>
             </span>
           </div>
 
-          {/* Company Name (Optional) */}
+          {/* Company Name */}
           <div className="relative">
             <input
               type="text"
-              name="company"
-              value={formData.company}
-              onChange={handleChange}
-              className="w-full px-3 pt-4 pb-2 border-2 border-gray-300 rounded-lg outline-none focus:border-purple-500"
+              className="w-full px-3 pt-4 pb-2 border-2 border-gray-400 rounded-lg outline-none focus:border-purple-600"
             />
-            <span className="absolute -top-2 left-3 px-1 text-sm text-purple-600 bg-white">
+            <span className="absolute -top-2 left-3 px-1 text-sm font-semibold text-purple-600 bg-white">
               Company name
             </span>
           </div>
 
-          {/* Agency Yes/No */}
-          <div>
-            <p className="text-sm font-medium text-gray-700 mb-2">
-              Are you an Agency? *
-            </p>
-            <div className="flex items-center space-x-4">
+          {/* Radio */}
+          <div className="mt-4">
+            <p className="text-gray-700 mb-2 font-semibold">Are you an Agency? <span className="text-red-800 font-bold"> *</span></p>
+            <div className="flex items-center space-x-6">
               <label className="flex items-center space-x-2">
-                <input
-                  type="radio"
-                  name="agency"
-                  value="Yes"
-                  checked={formData.agency === "Yes"}
-                  onChange={handleChange}
-                  required
-                  className="text-purple-600 focus:ring-purple-500"
-                />
+                <input type="radio" name="agency" value="yes" className="accent-purple-600" />
                 <span>Yes</span>
               </label>
               <label className="flex items-center space-x-2">
-                <input
-                  type="radio"
-                  name="agency"
-                  value="No"
-                  checked={formData.agency === "No"}
-                  onChange={handleChange}
-                  required
-                  className="text-purple-600 focus:ring-purple-500"
-                />
+                <input type="radio" name="agency" value="no" className="accent-purple-600" />
                 <span>No</span>
               </label>
             </div>
@@ -154,12 +90,7 @@ const Register = () => {
           {/* Submit Button */}
           <button
             type="submit"
-            disabled={!isFormValid}
-            className={`w-full py-3 rounded-lg text-white font-semibold transition ${
-              isFormValid
-                ? "bg-purple-600 hover:bg-purple-700"
-                : "bg-gray-400 cursor-not-allowed"
-            }`}
+            className="w-full py-3 bg-purple-600 hover:bg-purple-800 text-white font-semibold rounded-lg hover:opacity-90 transition"
           >
             Create Account
           </button>
