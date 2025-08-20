@@ -18,7 +18,6 @@ const Signin = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
-     
       <div
         className="
           w-full min-h-screen sm:min-h-0 sm:w-full sm:max-w-md
@@ -35,7 +34,6 @@ const Signin = () => {
           dolor sit amet, consectetur adipisicing elit. Sapiente, praesentium!
         </p>
 
-        
         <form onSubmit={handleSubmit} className="mt-8 space-y-6">
           {/* Email Field */}
           <div className="relative">

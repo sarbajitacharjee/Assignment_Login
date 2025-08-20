@@ -36,8 +36,9 @@ const AccountDetails = () => {
         <p className="mt-5 text-sm text-gray-600 leading-relaxed max-w-2xl">
           Lorem ipsum dolor sit amet, consectetur sadipscing elitr, sed diam
           nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores laudantium sit, aliquid architecto ipsa officiis veniam perspiciatis necessitatibus laboriosam?
-
+          sed diam. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Asperiores laudantium sit, aliquid architecto ipsa officiis veniam
+          perspiciatis necessitatibus laboriosam?
         </p>
       </div>
     </div>

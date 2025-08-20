@@ -8,7 +8,7 @@ const CreateAccount = () => {
     email: "",
     password: "",
     company: "",
-    agency: ""
+    agency: "",
   });
 
   const navigate = useNavigate();
@@ -147,9 +147,15 @@ const CreateAccount = () => {
           {/* Submit Button */}
           <button
             type="submit"
-            disabled={!formData.fullName || !formData.email || !formData.password}
+            disabled={
+              !formData.fullName || !formData.email || !formData.password
+            }
             className={`w-full py-3 bg-purple-600 hover:bg-purple-800 text-white font-semibold rounded-lg transition 
-              ${!formData.fullName || !formData.email || !formData.password ? "opacity-50 cursor-not-allowed" : ""}`}
+              ${
+                !formData.fullName || !formData.email || !formData.password
+                  ? "opacity-50 cursor-not-allowed"
+                  : ""
+              }`}
           >
             Create Account
           </button>
