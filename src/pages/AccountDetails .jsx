@@ -1,5 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
+import { FaCamera } from "react-icons/fa";
 
 const AccountDetails = () => {
   const location = useLocation();
@@ -16,12 +17,21 @@ const AccountDetails = () => {
 
       {/* Profile Section */}
       <div className="md:flex md:flex-col md:items-center p-6 md:px-12 flex-1 bg-blue-50">
-        <div className="flex items-center gap-4">
-          <img
-            src="https://randomuser.me/api/portraits/women/44.jpg"
-            alt="profile"
-            className="w-16 h-16 rounded-full object-cover"
-          />
+        <div className="relative flex items-center gap-4">
+          {/* Profile Image with added Camera Icon no js for now  */}
+          <div className="relative">
+            <img
+              src="https://randomuser.me/api/portraits/women/44.jpg"
+              alt="profile"
+              className="w-24 h-24 md:w-24 md:h-24 rounded-full object-cover border-2 border-white shadow-md"
+            />
+            {/* Camera Icon Overlay */}
+            <div className="absolute bottom-0 right-0 bg-purple-700 p-1.5 rounded-full shadow-md cursor-pointer">
+              <FaCamera className="text-white  text-sm" />
+            </div>
+          </div>
+
+          {/* User Info */}
           <div>
             <h3 className="text-gray-900 font-semibold text-lg">
               {fullName || "Marry Doe"}
@@ -32,7 +42,6 @@ const AccountDetails = () => {
           </div>
         </div>
 
-        {/* Description */}
         <p className="mt-5 text-sm text-gray-600 leading-relaxed max-w-2xl">
           Lorem ipsum dolor sit amet, consectetur sadipscing elitr, sed diam
           nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
