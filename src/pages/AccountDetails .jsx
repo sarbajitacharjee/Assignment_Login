@@ -9,7 +9,7 @@ const AccountDetails = () => {
     <div className="min-h-screen bg-gray-400 flex flex-col">
       {/* Header */}
       <div className="border-b px-6 bg-white py-4 md:px-8">
-        <h2 className="text-gray-800 font-bold text-start md:text-center text-xl md:text-2xl">
+        <h2 className="text-gray-800 font-bold text-start md:text-center text-xl md:text-3xl">
           Account Settings
         </h2>
       </div>

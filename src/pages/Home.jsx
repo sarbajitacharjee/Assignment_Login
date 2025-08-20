@@ -6,7 +6,7 @@ const Home = () => {
       <div className="w-full flex flex-col justify-end sm:justify-center mb-10">
         <div className="w-full sm:max-w-md sm:bg-white sm:rounded-2xl sm:shadow-lg sm:p-6 sm:mx-auto">
           {/* Heading */}
-          <h1 className="text-2xl font-bold text-gray-800 mb-2">
+          <h1 className="text-3xl font-bold text-gray-800 mb-2">
             Welcome to PopX
           </h1>
           <p className="text-gray-500 mb-6 text-sm sm:text-base">

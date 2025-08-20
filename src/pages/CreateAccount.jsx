@@ -28,8 +28,8 @@ const CreateAccount = () => {
     <div className="min-h-screen flex justify-center items-top md:items-center bg-white">
       {/* Wrapper: Full screen on mobile, card on desktop */}
       <div className="w-full px-6 py-8 md:w-[400px] md:bg-white md:rounded-xl md:shadow-md">
-        <h2 className="text-2xl font-bold text-gray-800 mb-1">Create your</h2>
-        <h2 className="text-2xl font-bold text-gray-800 mb-6">PopX account</h2>
+        <h2 className="text-3xl font-bold text-gray-800 mb-1">Create your</h2>
+        <h2 className="text-3xl font-bold text-gray-800 mb-6">PopX account</h2>
 
         <form className="space-y-5" autoComplete="off" onSubmit={handleSubmit}>
           {/* Full Name */}
