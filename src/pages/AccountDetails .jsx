@@ -16,7 +16,7 @@ const AccountDetails = () => {
       </div>
 
       {/* Profile Section */}
-      <div className="md:flex md:flex-col md:items-center p-6 md:px-12 flex-1 bg-blue-50">
+      <div className="md:flex md:flex-col md:items-center p-6 md:px-12 flex-1 bg-gray-100">
         <div className="relative flex items-center gap-4">
           {/* Profile Image with added Camera Icon no js for now  */}
           <div className="relative">

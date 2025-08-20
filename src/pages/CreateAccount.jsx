@@ -25,7 +25,7 @@ const CreateAccount = () => {
   };
 
   return (
-    <div className="min-h-screen flex justify-center items-top md:items-center bg-white">
+    <div className="min-h-screen flex justify-center items-top md:items-center bg-gray-50">
       {/* Wrapper: Full screen on mobile, card on desktop */}
       <div className="w-full px-6 py-8 md:w-[400px] md:bg-white md:rounded-xl md:shadow-md">
         <h2 className="text-3xl font-bold text-gray-800 mb-1">Create your</h2>

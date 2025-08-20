@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div className="flex min-h-screen bg-gray-50 px-4">
+    <div className="flex min-h-screen bg-white px-4">
       <div className="w-full flex flex-col justify-end sm:justify-center mb-10">
-        <div className="w-full sm:max-w-md sm:bg-white sm:rounded-2xl sm:shadow-lg sm:p-6 sm:mx-auto">
+        <div className="w-full sm:max-w-md bg-gray-50 sm:rounded-2xl sm:shadow-lg sm:p-6 sm:mx-auto">
           {/* Heading */}
           <h1 className="text-3xl font-bold text-gray-800 mb-2">
             Welcome to PopX
