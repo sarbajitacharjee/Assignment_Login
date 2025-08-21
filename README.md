@@ -3,6 +3,7 @@ Mobile-First UI Design Assignment
 
 This project is a mobile-first UI design, created with HTML, CSS (Tailwind CSS if applicable), and minimal JavaScript. It focuses primarily on delivering a clean, intuitive, and responsive interface optimized for mobile devices. The main goal is design-oriented, with little JS logic to enhance interactivity.
 
+[Demo Link:](https://assignment-login.vercel.app/)
 Features
 
 Mobile-first design: Optimized for smartphones and small screens.
