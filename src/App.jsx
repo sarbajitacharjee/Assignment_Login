@@ -5,7 +5,7 @@ import {
 
 import Home from "./pages/Home";
 import CreateAccount from "./pages/CreateAccount";
-import AccountDetails from "./pages/AccountDetails";
+import AccountDetails from "./pages/AccountDetails ";
 import Login from "./pages/Login";
 
 const router = createBrowserRouter([
